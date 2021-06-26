@@ -38,7 +38,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                deploy adapters: [tomcat9(credentialsId: 'Tomcat9', path: '', url: 'http://localhost:8085/')], contextPath: 'springdemo', war: '**/springWeather.war'
+                deploy adapters: [tomcat9(credentialsId: 'Tomcat9', path: '', url: 'http://localhost:8085/')], contextPath: 'springdemo', war: '**/springWeather-0.0.1-SNAPSHOT.war'
                 echo 'End of Deploy to Artifactory'
             }
         }
