@@ -17,6 +17,20 @@
 	<properties>
 		<java.version>11</java.version>
 	</properties>
+
+	<distributionManagement>
+		<repository>
+			<id>central</id>
+			<name>SubruLAPTOP-releases</name>
+			<url>http://localhost:8082/artifactory/DemoMavenRepo</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>SubruLAPTOP-snapshots</name>
+			<url>http://localhost:8082/artifactory/DemoMavenRepo</url>
+		</snapshotRepository>
+	</distributionManagement>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
