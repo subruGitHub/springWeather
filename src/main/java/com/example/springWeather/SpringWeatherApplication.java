@@ -22,9 +22,24 @@ public class SpringWeatherApplication extends SpringBootServletInitializer {
 		SpringApplication.run(SpringWeatherApplication .class, args);
 	}
 
+	@GetMapping("/")
+	public String hello() {
+		return "<h1>This is the Home page</h1>";
+	}
+
 	@GetMapping("/hello")
-	public String sayHello(@RequestParam(value = "myName", defaultValue = "World") String name) {
+	public String sayHello(@RequestParam(value = "name", defaultValue = "World") String name) {
 		return String.format("Hello %s!", name);
+	}
+
+	@GetMapping("/square")
+	public String helloSquare(@RequestParam(value = "num", defaultValue = "0") int num) {
+
+
+		MathDemo mat1 = new MathDemo();
+		int result = mat1.square(num);
+
+		return String.format("Square of %s!", num + " is " + result);
 	}
 }
 
