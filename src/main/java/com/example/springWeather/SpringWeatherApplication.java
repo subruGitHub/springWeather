@@ -13,6 +13,11 @@ public class SpringWeatherApplication {
 		SpringApplication.run(SpringWeatherApplication.class, args);
 	}
 
+	@GetMapping("/")
+	public String helloWelcome(@RequestParam(value = "name", defaultValue = "World") String name) {
+		return String.format("Hello %s! Welcome to the Weather World", name);
+	}
+
 	@GetMapping("/hello")
 	public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
 		return String.format("Hello %s! Welcome to the Weather World", name);
