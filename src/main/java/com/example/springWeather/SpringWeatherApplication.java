@@ -11,13 +11,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SpringWeatherApplication {
 
-	public static void main(String[] args) {
+	public static void main(String[] args)
+	{
 		SpringApplication.run(SpringWeatherApplication.class, args);
 	}
 
 
-	@RequestMapping("/")
-	public String goToHomePage () {
+	@GetMapping("/")
+	public String hello() {
 		return "<h1>This is the Home page</h1>";
 	}
 
