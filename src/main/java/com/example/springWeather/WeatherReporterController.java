@@ -29,7 +29,7 @@ public class WeatherReporterController {
         return reporterCollection;
     }
 
-    @RequestMapping(value = "/reporters/{id}", produces = "application/json")
+    @RequestMapping(value = "/reporters/{id}", produces = "application/xml")
     public ResponseEntity<Reporter> getReporterById (@PathVariable("id") int id)
     {
         if (id <= 3) {
