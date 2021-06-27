@@ -12,7 +12,7 @@ import java.util.List;
 @RestController
 public class WeatherReporterController {
 
-    @RequestMapping(value = "/reporters")
+    @RequestMapping(value = "/reporters", produces = "application/json")
     public ArrayList<Reporter> getAllReporters()
     {
         ArrayList<Reporter> reporterCollection=new ArrayList<>();
@@ -29,7 +29,7 @@ public class WeatherReporterController {
         return reporterCollection;
     }
 
-    @RequestMapping(value = "/reporters/{id}")
+    @RequestMapping(value = "/reporters/{id}", produces = "application/json")
     public ResponseEntity<Reporter> getReporterById (@PathVariable("id") int id)
     {
         if (id <= 3) {
