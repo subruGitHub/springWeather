@@ -33,8 +33,8 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing API using postman..'
-                npm install -g newman
-                newman run test//api//WeatherAPITestCollection.postman_collection.json -d 2000
+                bat "npm install -g newman"
+                bat "newman run test//api//WeatherAPITestCollection.postman_collection.json -d 2000"
                 echo 'API Testing over..'
 
             }
