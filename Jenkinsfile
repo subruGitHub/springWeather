@@ -5,7 +5,7 @@ pipeline {
 
     environment {
         JAVA_HOME = 'C:\\Users\\msubr\\.jdks\\openjdk-16.0.1'
-        PATH = "${PATH}" + ';C:\\Users\\msubr\\apache-maven-3.8.1\\bin\\'
+        PATH = "${PATH}" + ';C:\\Users\\msubr\\apache-maven-3.8.1\\bin\\' + ';C:\\Users\\msubr\\AppData\\Roaming\\npm\\'
 
     }
 
@@ -35,7 +35,7 @@ pipeline {
                 echo 'Testing API using postman..'
 
                 bat "npm install -g newman"
-                bat "C:\\Users\\msubr\\AppData\\Roaming\\npm\\newman run WeatherAPITestCollection.postman_collection.json"
+                bat "newman run src\\test\\api\\WeatherAPITestCollection.postman_collection.json"
                 echo 'API Testing over..'
             }
         }
