@@ -24,15 +24,15 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "https://jsonplaceholder.typicode.com/todos/1",
-          "protocol": "https",
+          "raw": "http://localhost:8085/SpringWeather-0.0.1-SNAPSHOT/reporters/1",
+          "protocol": "http",
           "host": [
-            "jsonplaceholder",
-            "typicode",
-            "com"
+            "localhost"
           ],
+          "port": "8085",
           "path": [
-            "todos",
+            "SpringWeather-0.0.1-SNAPSHOT",
+            "reporters",
             "1"
           ]
         }
@@ -51,7 +51,7 @@
               "});\r",
               "\r",
               "pm.test(\"name is correct\", () => \r",
-              "  pm.expect(pm.response.json().title).to.equal(\"delectus aut autem\"));"
+              "  pm.expect(pm.response.json().fName).to.equal(\"Lokesh\"));"
             ],
             "type": "text/javascript"
           }
@@ -61,15 +61,15 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "https://jsonplaceholder.typicode.com/todos/1",
-          "protocol": "https",
+          "raw": "http://localhost:8085/SpringWeather-0.0.1-SNAPSHOT/reporters/1",
+          "protocol": "http",
           "host": [
-            "jsonplaceholder",
-            "typicode",
-            "com"
+            "localhost"
           ],
+          "port": "8085",
           "path": [
-            "todos",
+            "SpringWeather-0.0.1-SNAPSHOT",
+            "reporters",
             "1"
           ]
         }
