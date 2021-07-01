@@ -32,7 +32,11 @@ pipeline {
 
         stage('Test') {
             steps {
-                echo 'Testing..'
+                echo 'Testing API using postman..'
+                npm install -g newman
+                newman run test//api//WeatherAPITestCollection.postman_collection.json -d 2000
+                echo 'API Testing over..'
+
             }
         }
         stage('Deploy') {
