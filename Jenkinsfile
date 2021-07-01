@@ -37,7 +37,6 @@ pipeline {
                 bat "npm install -g newman"
                 bat "newman run WeatherAPITestCollection.postman_collection.json"
                 echo 'API Testing over..'
-
             }
         }
         stage('Deploy') {
