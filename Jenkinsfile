@@ -33,8 +33,9 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing API using postman..'
+                bat "cd src\\test\\api"
                 bat "npm install -g newman"
-                bat "C:\\Program Files\\nodejs\\node_modules\\npm\\newman run WeatherAPITestCollection.postman_collection.json"
+                bat "newman run WeatherAPITestCollection.postman_collection.json"
                 echo 'API Testing over..'
 
             }
