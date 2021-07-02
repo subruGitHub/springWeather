@@ -2,13 +2,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="TestSuite">
     <test name="LoginTest">
-        <groups>
-            <run>
-                <include name="WeatherTest"/>
-            </run>
-        </groups>
         <classes>
             <class name="com.example.springWeather.LoginPage">
+                <methods>
+                <include name="testgooglrsearch" />
+                <include name="loginTest" />
+                </methods>
             </class>
         </classes>
     </test>
