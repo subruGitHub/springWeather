@@ -37,6 +37,8 @@ pipeline {
                 bat "npm install -g newman"
                 bat "newman run src\\test\\api\\WeatherAPITestCollection.postman_collection.json"
                 echo 'API Testing over..'
+                echo "Let's try TestNG"
+                bat "Java –cp bin;lib/* org.testng.TestNG src\\test\\TestNGCollection.xml"
             }
         }
         stage('Deploy') {
