@@ -3,7 +3,7 @@ package com.example.springWeather;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-//import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -13,12 +13,14 @@ import org.testng.annotations.BeforeTest;
 
 public class LoginPage {
     WebDriver driver;
+    WebDriver foxDriver;
 
     @BeforeTest
     public void setup(){
         System.setProperty("webdriver.chrome.driver","C:\\Users\\msubr\\Webdriver\\chromedriver_win32\\chromedriver.exe");
+        System.setProperty("webdriver.gecko.driver","C:\\Users\\msubr\\Webdriver\\geckodriver-v0.29.1-win64\\geckodriver.exe");
         //initialise the WebDriver
-        //driver = new FirefoxDriver();
+        foxDriver = new FirefoxDriver();
         driver = new ChromeDriver();
     }
 
@@ -54,8 +56,25 @@ public class LoginPage {
 
     }
 
+    @Test
+    public void testgooglrsearch(){
+
+        //it will open the goggle page
+        foxDriver.get("http://google.in");
+        //we expect the title “Google “ should be present
+        String Expectedtitle = "Google";
+        //it will fetch the actual title
+        String Actualtitle = foxDriver.getTitle();
+        System.out.println("Before Assetion " + Expectedtitle + Actualtitle);
+        //it will compare actual title and expected title
+        Assert.assertEquals(Actualtitle, Expectedtitle);
+        //print out the result
+        System.out.println("After Assertion " + Expectedtitle + Actualtitle + " Title matched ");
+    }
+
     @AfterTest
     public void teardown(){
         driver.quit();
+        foxDriver.quit();
     }
 }
