@@ -6,7 +6,6 @@ pipeline {
     environment {
         JAVA_HOME = 'C:\\Users\\msubr\\.jdks\\openjdk-16.0.1'
         PATH = "${PATH}" + ';C:\\Users\\msubr\\apache-maven-3.8.1\\bin\\' + ';C:\\Users\\msubr\\AppData\\Roaming\\npm\\'
-        SELENIUM_PATH = 'bin;C:\\Users\\msubr\\Webdriver\\chromedriver_win32;C:\\Users\\msubr\\SpringProject\\springWeather\\target\\SpringWeather-0.0.1-SNAPSHOT\\WEB-INF\\lib\\*;C:\\Users\\msubr\\Webdriver\\geckodriver-v0.29.1-win64;lib/*;./*;%CLASSPATH%\\*;C:\\Windows\\System32\\config\\systemprofile\\AppData\\Local\\Jenkins\\.jenkins\\workspace\\springdemoPipelineFromGITHUB\\target\\*;C:\\Windows\\System32\\config\\systemprofile\\AppData\\Local\\Jenkins\\.jenkins\\workspace\\springdemoPipelineFromGITHUB\\target\\test-classes\\*;C:\\Users\\msubr\\.m2\\repository\\com\\beust\\jcommander\\1.48\\jcommander-1.48.jar;C:\\Users\\msubr\\.m2\\repository\\org\\testng\\testng\\6.10\\testng-6.10.jar;C:\\Users\\msubr\\.m2\\repository\\org\\seleniumhq\\selenium\\*;'
         CLASSPATH= "C:\\Windows\\System32\\config\\systemprofile\\AppData\\Local\\Jenkins\\.jenkins\\workspace\\springdemoPipelineFromGITHUB\\target\\test-classes\\;%CLASSPATH%;C:\\Users\\msubr\\Webdriver\\*;C:\\Users\\msubr\\.m2\\repository\\*"
 
     }
