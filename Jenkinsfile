@@ -38,7 +38,7 @@ pipeline {
                 bat "newman run src\\test\\api\\WeatherAPITestCollection.postman_collection.json"
                 echo 'API Testing over..'
                 echo "Let's try TestNG"
-                bat "Java –cp bin;lib/* org.testng.TestNG src\\test\\testng.xml"
+                bat "Java –cp bin;lib/*;C:\\Users\\msubr\\.m2\\repository\\org\\testng\\testng\\6.10\\* org.testng.TestNG src\\test\\testng.xml"
             }
         }
         stage('Deploy') {
