@@ -11,11 +11,11 @@ pipeline {
 
     stages {
 
-        stage ('Initialize') {
+        stage('Initialize') {
             steps {
 
-                    echo "PATH = ${PATH}"
-                    echo "JAVA_HOME = ${JAVA_HOME}"
+                echo "PATH = ${PATH}"
+                echo "JAVA_HOME = ${JAVA_HOME}"
             }
         }
 
@@ -33,18 +33,12 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing API using postman..'
-
                 bat "npm install -g newman"
                 bat "newman run src\\test\\api\\WeatherAPITestCollection.postman_collection.json"
                 echo 'API Testing over..'
-                }
-            steps {
-                dir("comtest/target") {
-                    echo "Let's try TestNG"
-                    echo "java -cp bin;lib/*;C:\\Users\\msubr\\.m2\\repository\\* org.testng.TestNG src\\test\\testng.xml"
-                }
             }
         }
+
 
         stage('Deploy') {
             steps {
