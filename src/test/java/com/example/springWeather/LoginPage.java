@@ -2,6 +2,7 @@ package com.example.springWeather;
 
 // Testing using Selenium - TestNG
 
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -10,6 +11,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
+
 
 public class LoginPage {
     WebDriver driver;
@@ -22,6 +24,7 @@ public class LoginPage {
         //initialise the WebDriver
         foxDriver = new FirefoxDriver();
         driver = new ChromeDriver();
+
     }
 
     /* reference Test
