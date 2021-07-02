@@ -10,7 +10,6 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
 
-
 public class LoginPage {
     WebDriver driver;
     WebDriver foxDriver;
