@@ -1,5 +1,6 @@
 package com.example.springWeather;
 
+// Testing using Selenium - TestNG
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
